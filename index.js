@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 
-consr PORT = process.env.PORT
+const PORT = process.env.PORT
 const server = createServer(app);
 const io = new Server(server, {
     cors: { origin: "*" }
