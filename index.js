@@ -11,6 +11,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+
+consr PORT = process.env.PORT
 const server = createServer(app);
 const io = new Server(server, {
     cors: { origin: "*" }
@@ -81,4 +83,4 @@ app.get("/messages/:userId", async (req, res) => {
 });
 
 // Start Server
-server.listen(4000, () => console.log("Server running on port 4000"));
+server.listen(PORT, () => console.log(`Server running on port ${PORT} `));
