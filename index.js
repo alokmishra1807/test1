@@ -41,7 +41,7 @@ const users = {};
 
 
 io.on("connection", (socket) => {
-    console.log(`User Connected: ${socket.id}`);
+  //  console.log(`User Connected: ${socket.id}`);
 
    
     socket.on("join", (userId) => {
@@ -62,7 +62,7 @@ io.on("connection", (socket) => {
 
  
     socket.on("disconnect", () => {
-        console.log(`User Disconnected: ${socket.id}`);
+       // console.log(`User Disconnected: ${socket.id}`);
         for (let userId in users) {
             if (users[userId] === socket.id) {
                 delete users[userId];
